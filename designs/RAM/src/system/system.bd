@@ -1,0 +1,148 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x384231830AF422B",
+      "device": "xczu3eg-sbva484-1-i",
+      "name": "system",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "zynq_ultra_ps_e_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "clk_33MHz": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "system_clk_wiz_0_0_clk_out1",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "33333000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "zynq_ultra_ps_e_0": {
+        "vlnv": "xilinx.com:ip:zynq_ultra_ps_e:3.3",
+        "xci_name": "system_zynq_ultra_ps_e_0_0",
+        "xci_path": "ip\\system_zynq_ultra_ps_e_0_0\\system_zynq_ultra_ps_e_0_0.xci",
+        "inst_hier_path": "zynq_ultra_ps_e_0",
+        "parameters": {
+          "PSU_DDR_RAM_HIGHADDR_OFFSET": {
+            "value": "0x00000002"
+          },
+          "PSU_DDR_RAM_LOWADDR_OFFSET": {
+            "value": "0x20000000"
+          },
+          "PSU__DDR_HIGH_ADDRESS_GUI_ENABLE": {
+            "value": "0"
+          },
+          "PSU__USE__M_AXI_GP2": {
+            "value": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "system_clk_wiz_0_0",
+        "xci_path": "ip\\system_clk_wiz_0_0\\system_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "AUTO_PRIMITIVE": {
+            "value": "PLL"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "181.081"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "114.213"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "33"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "Buffer"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "Buffer"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "24"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "AUTO"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "PRIMITIVE": {
+            "value": "Auto"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      }
+    },
+    "nets": {
+      "zynq_ultra_ps_e_0_pl_clk0": {
+        "ports": [
+          "zynq_ultra_ps_e_0/pl_clk0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "clk_33MHz"
+        ]
+      }
+    }
+  }
+}
