@@ -83,7 +83,7 @@ module fifo_ctrl
                     begin
                         w_ptr_next = w_ptr_succ;
                         empty_next = 1'b0;
-                        if(w_ptr_succ == r_ptr_logic)
+                        if(w_ptr_succ == r_ptr_logic) //if w_ptr overlaps with r_ptr fifo full
                             full_next = 1'b1;
                 end
             2'b11: //write and read
